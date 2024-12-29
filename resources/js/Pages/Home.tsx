@@ -3,6 +3,7 @@ import Footer from "@/Components/Footer"
 import Hero from "@/Components/Hero"
 import Navbar from "@/Components/Navbar"
 import { Project } from "@/Components/Projects"
+import Services from "@/Components/Services"
 import Default from "@/Layouts/Default"
 import { Head } from "@inertiajs/react"
 
@@ -57,6 +58,11 @@ const Home = ({versions}: {versions: any}) => {
 
     <Brand />
 </div>
+
+<div className="mt-20">
+    <Services />
+</div>
+
 
 <div className="mt-20">
 <h1 className=' text-6xl text-gray-400 mb-5 '>Some of our projects</h1>
