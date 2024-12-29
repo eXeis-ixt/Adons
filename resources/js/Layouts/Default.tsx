@@ -10,7 +10,7 @@ const Default = ({children}: PropsWithChildren) => {
     <Navbar />
 </div>
 
-<div className=' mt-24'>
+<div className=' mt-24 container'>
     {children}
 </div>
 
