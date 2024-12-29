@@ -4,6 +4,7 @@ import Hero from "@/Components/Hero"
 import Navbar from "@/Components/Navbar"
 import { Project } from "@/Components/Projects"
 import Services from "@/Components/Services"
+import TechStack from "@/Components/TechStack"
 import Default from "@/Layouts/Default"
 import { Head } from "@inertiajs/react"
 
@@ -58,6 +59,11 @@ const Home = ({versions}: {versions: any}) => {
 
     <Brand />
 </div>
+
+<div className="mt-20">
+    <TechStack />
+</div>
+
 
 <div className="mt-20">
     <Services />

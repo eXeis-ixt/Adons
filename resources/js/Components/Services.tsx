@@ -13,14 +13,12 @@ const Services = () => {
             Why choose us
             </span>
             <h2
-                className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+                className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-6xl">
                 Build a Website That Your Customers Love
             </h2>
             <p
                 className="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-400">
-                Our templates allow for maximum customization. No technical skills required – our intuitive design tools
-                let
-                you get the job done easily.
+               Our higly skilled team of developers will turn your ideas into reality. We build websites that are fast, secure, and easy to manage.
             </p>
         </div>
 
