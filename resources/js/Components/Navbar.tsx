@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-4 left-4 right-4 z-50 rounded-xl">
       {/* Backdrop blur container */}
-      <div className="absolute inset-0 bg-transparent backdrop-blur-lg rounded-xl shadow-lg" />
+      <div className="absolute inset-0 bg-transparent backdrop-blur-lg rounded-full" />
 
       {/* Navbar content */}
       <div className="relative px-4">

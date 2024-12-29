@@ -1,4 +1,6 @@
 import React from "react";
+import { RainbowButton } from "./ui/rainbow-button";
+import { Link } from "@inertiajs/react";
 
 const Hero = () => {
     return (
@@ -12,14 +14,22 @@ const Hero = () => {
                     </h1>
                 </div>
 
-<div>
-                    <p className=" text-lg text-gray-400  text-center">
-                        We are a team of passionate developers, designers and innovators.
-                    </p>
-</div>
-
                 <div>
+                    <p className=" text-lg text-gray-400  text-center">
+                        We are a team of passionate developers, designers and
+                        innovators.
+                    </p>
                 </div>
+                <div>
+                    <RainbowButton>
+                        <Link href="/">
+                        Get Started
+                        </Link>
+
+                        </RainbowButton>
+                </div>
+
+                <div></div>
             </div>
         </div>
     );

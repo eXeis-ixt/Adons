@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import React from 'react';
 
 interface NavLinksProps {
@@ -16,14 +17,14 @@ const NavbarLinks: React.FC<NavLinksProps> = ({ className = '', onItemClick }) =
   return (
     <div className={className}>
       {links.map(link => (
-        <a
+        <Link
           key={link.label}
           href={link.href}
           className="text-white transition-colors"
           onClick={onItemClick}
         >
           {link.label}
-        </a>
+        </Link>
       ))}
     </div>
   );
