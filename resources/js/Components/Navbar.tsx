@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import NavbarLinks from './NavbarLink';
 import MobileMenu from './MobileMenu';
+import { Link } from '@inertiajs/react';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,7 +18,11 @@ const Navbar = () => {
       <div className="relative px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <span className=" font-semibold">Adons Tech</span>
+          <Link href="/" >
+          {/* <span className=" font-semibold">Adons Tech</span> */}
+
+          <img src="/adons.png" width={70} alt="" />
+          </Link>
 
           {/* Desktop Navigation */}
           <NavbarLinks className="hidden md:flex items-center space-x-8" />

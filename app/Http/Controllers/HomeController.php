@@ -14,4 +14,7 @@ class HomeController extends Controller
             'versions'=> $versions
         ]);
     }
+    public function about(){
+        return Inertia::render('About');
+    }
 }

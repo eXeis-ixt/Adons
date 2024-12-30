@@ -19,12 +19,12 @@ const Footer = ({ version }: { version?: string }) => {
                             Trusted in more than 8 countries & 100+ million
                             customers. Have any query?
                         </p>
-                        <a
-                            href="javascript:;"
+                        <Link
+                            href={(route('contact'))}
                             className="text-white hover:scale-105  delay-75 bg-primary-600 px-4 py-2 ring-2 ring-[#7081ff] rounded-md transition-colors"
                         >
                             Contact us
-                        </a>
+                        </Link>
                     </div>
                     <div className="lg:mx-auto text-left ">
                         <h4 className="text-lg text-gray-400 font-medium mb-7">
