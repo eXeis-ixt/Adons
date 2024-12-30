@@ -17,7 +17,7 @@ const Branding = () => {
             <div className="absolute top-1/2 left-1/2 -z-10 gradient-big w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem]"></div>
 
                 <div
-                    className="w-full hidden justify-center items-start gap-6 md:grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
+                    className=" z-10 w-full hidden justify-center items-start gap-6 md:grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
                     <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
                         <img className=" rounded-xl object-cover" src="https://pagedone.io/asset/uploads/1717741205.png" alt="about Us image" />
                     </div>
