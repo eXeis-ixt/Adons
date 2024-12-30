@@ -9,8 +9,9 @@ interface NavLinksProps {
 const NavbarLinks: React.FC<NavLinksProps> = ({ className = '', onItemClick }) => {
   const links = [
     { href: '#', label: 'Home' },
-    { href: '#', label: 'Products' },
     { href: '#', label: 'About' },
+    { href: '#', label: 'Products' },
+    { href: '#', label: 'Blog' },
     { href: '#', label: 'Contact' }
   ];
 

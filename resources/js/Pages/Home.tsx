@@ -1,4 +1,5 @@
 import Brand from "@/Components/Brand"
+import Branding from "@/Components/Branding"
 import Footer from "@/Components/Footer"
 import Hero from "@/Components/Hero"
 import Navbar from "@/Components/Navbar"
@@ -64,6 +65,9 @@ const Home = ({versions}: {versions: any}) => {
     <TechStack />
 </div>
 
+<div className="mt-20">
+    <Branding />
+</div>
 
 <div className="mt-20">
     <Services />
