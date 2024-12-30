@@ -7,10 +7,10 @@ import { Project } from "@/Components/Projects"
 import Services from "@/Components/Services"
 import TechStack from "@/Components/TechStack"
 import Default from "@/Layouts/Default"
-import { Head } from "@inertiajs/react"
-import { once } from "events"
+import { Head, Link } from "@inertiajs/react"
 
 import { motion } from "framer-motion"
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react"
 
 
 const projects = [
@@ -44,9 +44,17 @@ const projects = [
       },
   ];
 
+
+
+
 const Home = ({versions}: {versions: any}) => {
   return (
     <Default>
+<div>
+
+
+</div>
+
         <Head>
             <title>Home</title>
         </Head>
