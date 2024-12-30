@@ -86,3 +86,9 @@ body{
     background: conic-gradient(from 230.29deg at 51.63% 52.16%, rgba(255, 0, 0, 0) 0deg, rgba(255, 0, 64, 0.458) 67.5deg, rgba(7, 77, 254, 0.6) 198.75deg, rgba(54, 54, 250, 0.871) 251.25deg, rgb(243, 10, 10) 301.88deg, rgba(54, 1, 153, 0.737) 360deg);
 
 }
+
+
+.gradient-footer{
+    background: conic-gradient(from 230.29deg at 51.63% 52.16%, rgba(255, 0, 0, 0) 0deg, rgba(60, 0, 255, 0.323) 67.5deg, rgba(7, 77, 254, 0.6) 198.75deg, rgba(54, 54, 250, 0) 251.25deg, rgba(243, 10, 10, 0) 301.88deg, rgba(54, 1, 153, 0.737) 360deg);
+
+}

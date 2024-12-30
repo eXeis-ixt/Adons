@@ -9,9 +9,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className=" md:w-[50%] md:mx-auto fixed top-4 left-4 right-4 z-50 rounded-xl">
+    <nav className=" md:w-[50%] md:mx-auto shadow-md fixed top-4 left-4 right-4 z-50 rounded-xl">
       {/* Backdrop blur container */}
-      <div className="absolute inset-0 bg-transparent backdrop-blur-lg rounded-full" />
+      <div className="absolute inset-0  backdrop-blur-lg rounded-full" />
 
       {/* Navbar content */}
       <div className="relative px-4">
