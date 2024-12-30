@@ -1,6 +1,5 @@
 import React from "react";
 import Heading from "./ui/Heading";
-import Button from "./Button";
 import { RainbowButton } from "./ui/rainbow-button";
 
 const Branding = () => {
