@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link href="/" >
           {/* <span className=" font-semibold">Adons Tech</span> */}
 
-          <img src="/adons.png" width={70} alt="" />
+          <img src="/adons.png" width={70} alt="Adons Tech" />
           </Link>
 
           {/* Desktop Navigation */}

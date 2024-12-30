@@ -8,7 +8,9 @@ import Services from "@/Components/Services"
 import TechStack from "@/Components/TechStack"
 import Default from "@/Layouts/Default"
 import { Head } from "@inertiajs/react"
+import { once } from "events"
 
+import { motion } from "framer-motion"
 
 
 const projects = [
@@ -53,16 +55,29 @@ const Home = ({versions}: {versions: any}) => {
 <div className="mt-20">
 
     <Hero />
+
+
 </div>
 
 
 <div className="mt-20">
+<motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}>
 
     <Brand />
+</motion.div>
 </div>
 
 <div className="mt-20">
+    <motion.div initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.5, delay: 0.7 }}
+
+    viewport={{ once: true }}
+   >
     <TechStack />
+
+    </motion.div>
 </div>
 
 <div className="mt-20">

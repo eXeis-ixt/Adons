@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "./ui/Heading";
 import { RainbowButton } from "./ui/rainbow-button";
+import { Link } from "@inertiajs/react";
 
 const Branding = () => {
     return (
@@ -49,7 +50,9 @@ const Branding = () => {
                         </div>
                     </div>
                     <RainbowButton>
+                        <Link href={(route('about'))}>
                         Learn More
+                        </Link>
                     </RainbowButton>
                 </div>
             </div>

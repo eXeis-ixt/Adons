@@ -17,4 +17,7 @@ class HomeController extends Controller
     public function about(){
         return Inertia::render('About');
     }
+    public function products(){
+        return Inertia::render('Products');
+    }
 }
