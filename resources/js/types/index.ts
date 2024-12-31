@@ -15,13 +15,14 @@ export interface Post {
     title: string;
     slug: string;
     content: string;
-    featured_image: string | null;
-    is_published: boolean;
+    image: string | null;
     published_at: string | null;
     created_at: string;
     updated_at: string;
     category: Category;
-    user: User;
+    author: string | null;
+    keywords: string | null;
+    meta_description: string | null;
 }
 
 export interface PaginatedResponse<T> {
