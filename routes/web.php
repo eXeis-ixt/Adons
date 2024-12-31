@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -13,6 +14,9 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::post('/contact/{contact}', [ContactController::class, 'details'])->name('contact.details');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/products', [HomeController::class, 'products'])->name('products');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+
+// Auth section
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
