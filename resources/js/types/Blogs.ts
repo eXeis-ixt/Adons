@@ -32,3 +32,4 @@ export interface PaginatedResponse<T> {
     per_page: number;
     total: number;
 }
+
