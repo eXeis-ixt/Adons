@@ -15,6 +15,7 @@ Route::post('/contact/{contact}', [ContactController::class, 'details'])->name('
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/products', [HomeController::class, 'products'])->name('products');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog/{blog:slug}', [BlogController::class, 'show'])->name('blog.show');
 
 // Auth section
 Route::get('/dashboard', function () {

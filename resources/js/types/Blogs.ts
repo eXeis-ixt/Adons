@@ -10,20 +10,7 @@ export interface Category {
     slug: string;
 }
 
-export interface Post {
-    id: number;
-    title: string;
-    slug: string;
-    content: string;
-    image: string | null;
-    published_at: string | null;
-    created_at: string;
-    updated_at: string;
-    category: Category;
-    author: string | null;
-    keywords: string | null;
-    meta_description: string | null;
-}
+
 
 export interface PaginatedResponse<T> {
     data: T[];

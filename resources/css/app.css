@@ -96,3 +96,13 @@ body{
     background: conic-gradient(from 230.29deg at 51.63% 52.16%, rgba(255, 0, 0, 0) 0deg, rgba(60, 0, 255, 0.323) 67.5deg, rgba(254, 7, 7, 0.143) 198.75deg, rgba(54, 54, 250, 0.262) 251.25deg, rgba(243, 10, 10, 0.074) 301.88deg, rgba(54, 1, 153, 0) 360deg);
 
 }
+
+.blog p{
+    @apply text-gray-200 text-xl leading-8 pb-2 ;
+}
+.blog h2{
+    @apply text-2xl md:text-4xl font-bold pb-2;
+}
+.blog img{
+    @apply md:w-full w-[40%] h-full mx-auto ;
+}
