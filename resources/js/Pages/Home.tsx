@@ -7,47 +7,18 @@ import { Project } from "@/Components/Projects"
 import Services from "@/Components/Services"
 import TechStack from "@/Components/TechStack"
 import Default from "@/Layouts/Default"
+import { ProjectProps } from "@/types"
 import { Head, Link } from "@inertiajs/react"
 
 import { motion } from "framer-motion"
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react"
 
 
-const projects = [
-    {
-      title: "E-Commerce Dashboard",
-      description: "A modern dashboard built with React and real-time data visualization",
-      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
-      githubUrl: "https://github.com/username/ecommerce-dashboard",
-      liveUrl: "https://ecommerce-dashboard.demo"
-    },
-    {
-      title: "AI Writing Assistant",
-      description: "An AI-powered writing tool that helps improve your content",
-      imageUrl: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=80&w=2340",
-      githubUrl: "https://github.com/username/ai-writer",
-      liveUrl: "https://ai-writer.demo"
-    },
-    {
-      title: "Social Media Analytics",
-      description: "Track and analyze social media performance across platforms",
-      imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=2348",
-      githubUrl: "https://github.com/username/social-analytics",
-      liveUrl: "https://social-analytics.demo"
-    },
-    {
-        title: "Social Media Analytics",
-        description: "Track and analyze social media performance across platforms",
-        imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=2348",
-        githubUrl: "https://github.com/username/social-analytics",
-        liveUrl: "https://social-analytics.demo"
-      },
-  ];
 
 
 
 
-const Home = ({versions}: {versions: any}) => {
+const Home = ({projects}: {projects: ProjectProps[]}) => {
   return (
     <Default>
 <div>

@@ -12,3 +12,11 @@ export type PageProps<
         user: User;
     };
 };
+
+export interface ProjectProps {
+    title: string;
+    desc: string;
+    image: string;
+    image_url: string;
+    project_url: string;
+}
