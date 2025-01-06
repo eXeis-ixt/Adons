@@ -12,9 +12,12 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class TeamResource extends Resource
 {
@@ -27,7 +30,7 @@ class TeamResource extends Resource
         return $form
             ->schema([
                 Section::make('')->schema([
-                    FileUpload::make('image')->image()->imageEditor(),
+                    FileUpload::make('image')->image()->imageEditor()->optimize('webp'),
                     TextInput::make('name')
                 ])->columnSpan(1)->columns(1),
                 Section::make('Info')->schema([
@@ -41,12 +44,20 @@ class TeamResource extends Resource
     {
         return $table
             ->columns([
-                //
+                ImageColumn::make('image'),
+                TextColumn::make('name')->searchable()
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make()->after(function (Team $record) {
+                    // delete single
+                    if ($record->image) {
+                       Storage::disk('public')->delete($record->image);
+                    }
+
+                 }),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

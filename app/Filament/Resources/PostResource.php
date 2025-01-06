@@ -21,6 +21,7 @@ use Illuminate\Support\Str;
 use Filament\Forms\Set;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Support\Facades\Storage;
 
 class PostResource extends Resource
 {
@@ -43,7 +44,7 @@ class PostResource extends Resource
                     ->options(
                         \App\Models\Category::pluck('name', 'id')
                     )->required(),
-                    FileUpload::make('image')->image()->imageEditor(),
+                    FileUpload::make('image')->image()->imageEditor()->optimize('webp'),
                 RichEditor::make('content')->columnSpanFull()->required(),
 
                 ])->columns(2),
@@ -71,6 +72,13 @@ class PostResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make()->after(function (Post $record) {
+                    // delete single
+                    if ($record->image) {
+                       Storage::disk('public')->delete($record->image);
+                    }
+
+                 }),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

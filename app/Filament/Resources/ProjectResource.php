@@ -14,9 +14,11 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectResource extends Resource
 {
@@ -35,7 +37,7 @@ class ProjectResource extends Resource
 
                     Section::make('Meta')->schema([
                         Split::make([
-                            FileUpload::make('image')->image()->imageEditor(),
+                            FileUpload::make('image')->image()->imageEditor()->optimize('webp'),
                             TextInput::make('image_url')->prefix('url')->prefixIcon('heroicon-o-link')
                         ])
 
@@ -48,12 +50,19 @@ class ProjectResource extends Resource
     {
         return $table
             ->columns([
-                //
+                ImageColumn::make('image')
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make()->after(function (Project $record) {
+                    // delete single
+                    if ($record->image) {
+                       Storage::disk('public')->delete($record->image);
+                    }
+
+                 }),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
