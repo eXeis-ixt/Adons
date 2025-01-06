@@ -6,7 +6,7 @@ export interface User {
 }
 
 export type PageProps<
-    T extends Record<string, unknown> = Record<string, unknown>,
+    T extends Record<string, unknown> = Record<string, unknown>
 > = T & {
     auth: {
         user: User;
@@ -19,9 +19,9 @@ export interface ProjectProps {
     image: string;
     image_url: string;
     project_url: string;
-};
+}
 
-export interface TeamProps{
+export interface TeamProps {
     name: string;
     image?: string;
     position: string;
