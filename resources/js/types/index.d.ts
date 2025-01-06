@@ -19,4 +19,11 @@ export interface ProjectProps {
     image: string;
     image_url: string;
     project_url: string;
+};
+
+export interface TeamProps{
+    name: string;
+    image?: string;
+    position: string;
+    link?: string;
 }

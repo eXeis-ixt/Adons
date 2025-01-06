@@ -2,10 +2,11 @@ import { Button } from "@/Components/ui/button";
 import { Card, CardContent } from "@/Components/ui/card";
 import Heading from "@/Components/ui/Heading";
 import Default from "@/Layouts/Default";
+import { TeamProps } from "@/types";
 import { Head, Link } from "@inertiajs/react";
 import { ArrowRight, Code2, Globe, Users } from "lucide-react";
 
-export default function AboutPage() {
+export default function AboutPage({teams}: {teams: TeamProps[]}) {
     return (
         <>
         <Head>
@@ -85,23 +86,7 @@ export default function AboutPage() {
                                     </p>
                                 </div>
                                 <div className="grid gap-8 md:grid-cols-3">
-                                    {[
-                                        {
-                                            name: "Fahad Bhuiyan",
-                                            role: "COO & Co-Founder",
-                                            image: "https://avatars.githubusercontent.com/u/78530442?s=400&u=2876abeef21d55f999e19542a54c8e96afc5c9d7&v=4",
-                                        },
-                                        {
-                                            name: "Michael Chen",
-                                            role: "CTO",
-                                            image: "/placeholder.svg?height=400&width=400",
-                                        },
-                                        {
-                                            name: "Emma Davis",
-                                            role: "Head of Design",
-                                            image: "/placeholder.svg?height=400&width=400",
-                                        },
-                                    ].map((member) => (
+                                    {teams.map((member) => (
                                         <div
                                             key={member.name}
                                             className="space-y-3"
@@ -113,10 +98,12 @@ export default function AboutPage() {
                                             />
                                             <div>
                                                 <h3 className="font-medium text-foreground">
-                                                    {member.name}
+                                                    <a href={member.link ? member.link : "/about"} target="_blank">
+                                                        {member.name}
+                                                    </a>
                                                 </h3>
                                                 <p className="text-sm text-muted-foreground">
-                                                    {member.role}
+                                                    {member.position}
                                                 </p>
                                             </div>
                                         </div>
