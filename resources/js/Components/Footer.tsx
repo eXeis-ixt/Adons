@@ -16,7 +16,7 @@ const Footer = ({ version }: { version?: string }) => {
                             <Heading title="Adons Tech" />
                         </Link>
                         <p className="py-8 text-sm text-gray-300 lg:max-w-xs text-center lg:text-left">
-                            Trusted in more than 8 countries & 100+ million
+                            Trusted in more than 8 countries & 100+
                             customers. Have any query?
                         </p>
                         <Link
@@ -28,40 +28,40 @@ const Footer = ({ version }: { version?: string }) => {
                     </div>
                     <div className="lg:mx-auto text-left ">
                         <h4 className="text-lg text-gray-400 font-medium mb-7">
-                            Pagedone
+                            Links
                         </h4>
                         <ul className="text-sm  transition-all duration-500">
                             <li className="mb-6">
-                                <a
-                                    href="javascript:;"
+                                <Link
+                                    href={route('home')}
                                     className="text-gray-400 hover:text-gray-400"
                                 >
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li className="mb-6">
-                                <a
-                                    href="javascript:;"
+                                <Link
+                                    href={route('about')}
                                     className=" text-gray-400 hover:text-gray-400"
                                 >
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li className="mb-6">
-                                <a
-                                    href="javascript:;"
+                                <Link
+                                    href={route('products')}
                                     className=" text-gray-400 hover:text-gray-400"
                                 >
-                                    Pricing
-                                </a>
+                                    Products
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="javascript:;"
+                                <Link
+                                    href={route('blog')}
                                     className=" text-gray-400 hover:text-gray-400"
                                 >
-                                    Features
-                                </a>
+                                    Blogs
+                                </Link>
                             </li>
                         </ul>
                     </div>
