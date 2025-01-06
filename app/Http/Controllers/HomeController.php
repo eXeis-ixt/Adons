@@ -11,10 +11,8 @@ class HomeController extends Controller
 {
     public function index(){
         $versions = Application::VERSION;
-        $contacts = Contact::all();
         return Inertia::render('Home',[
             'versions'=> $versions,
-            'contacts'=> $contacts
         ]);
     }
     public function about(){
